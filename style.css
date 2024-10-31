@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #70aef0;
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+}
+
+#search-bar {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  margin:0 5px;;
+}
+
+.country-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap:25px;
+  max-width:1000px;
+
+}
+
+.country-card {
+  width:250px;
+  border: 3px solid #070606;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  margin-top:10px;
+  margin-bottom:0 6px;
+}
+
+.country-card img {
+  width: 100%;
+  height: auto;
+}
+
+.favorites {
+  width: 200px;
+  border-left: 1px solid #080808;
+  padding: 10px;
+
+}
+
+#show-more {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#back-link {
+  display: inline-block;
+  margin: 20px;
+  color: #007bff;
+  text-decoration: none;
+}
+/* Responsive Layout Adjustments */
+@media (min-width: 1200px) {
+  .country-list {
+      grid-template-columns: repeat(4, 1fr); /* 4 cards per row on large screens */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .country-list {
+      grid-template-columns: repeat(3, 1fr); /* 3 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .country-list {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .country-list {
+      grid-template-columns: 1fr; /* 1 card per row on extra small screens */
+  }
+}
